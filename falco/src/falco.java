@@ -13,7 +13,6 @@ public class falco {
             System.out.println("ergenbiss = 1");
         }else if(f<=0){
             System.out.println("ungueltige zahl abbruch");
-            return;
         }else{
             for (int i=f;i>=1;--i){
                 ergebnis=ergebnis*f;
