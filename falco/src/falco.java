@@ -1,18 +1,24 @@
-public class falco {
-    // 5! = 1*2*3*4*5
+import java.util.Scanner;
 
-    public static long fakite(int number){
-        long sum = 1;
-        for (int i = 1; i <= number;i++){
-            sum = sum*i;
-        }
-        return sum;
-    }
+public class falco {
 
     public static void main(String[] args) {
-        for (int i =1; i<300; i++){
-            System.out.println("Fakultät: "+ i+ " ist "+fakite(i));
-        }
 
+        Scanner cin = new Scanner(System.in);
+        int f;
+        int ergebnis=1;
+        System.out.println("bitte die positive zahl fuer die Fakultaet eingeben");
+        f=cin.nextInt();
+        if (f==0){
+            System.out.println("ergenbiss = 1");
+        }else if(f<=0){
+            System.out.println("ungueltige zahl abbruch");
+        }else{
+            for (int i=f;i>=1;--i){
+                ergebnis=ergebnis*f;
+                f--;
+            }
+            System.out.println(ergebnis);
+        }
     }
 }
